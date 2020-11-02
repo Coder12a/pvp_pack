@@ -5,7 +5,8 @@ minetest.register_tool("pvp_shields:shield_steel", {
     inventory_image = "pvp_shields_steel.png",
     groups = {armor_shield = 1,     -- Is a shield.
               block_pool = 50,      -- 50 guard points.
-              duration = 10000000   -- 10 seconds.
+              duration = 10000000,  -- 10 seconds.
+              block_cooldown = 2000000
              },
     on_block_activate = function(player)
         sound_play("shield_equip", {
